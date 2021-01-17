@@ -1,0 +1,15 @@
+{
+  "name": "nodepackage",
+  "version": "1.0.0",
+  "description": "Esta es una aplicacion de linea de comando (CLI).",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Johan Millers",
+  "license": "MIT",
+  "dependencies": {
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {}
+}
