@@ -1,17 +1,8 @@
-// Require
-const fs = require('fs');
+const {crearArchivo} = require('./multiplicar/multiplicar');
+let base = 'abc';
 
-let base = 12;
-let resultado = '';
 
-for (let i = 1; i<=12; i++) {
-    resultado += `${base} * ${i} = ${base * i}\n`
-    console.log(resultado);
-}
+crearArchivo(base)
+    .then(archivo => console.log(`Archivo creado: ${archivo}`))
+    .catch(e => console.log(e))
 
-fs.writeFile(`Tablas/Tabla-${base}.txt`,resultado,(err)=> {
-    if(err) throw err;
-
-    console.log(`El archivo Tabla-${base}.txt ha sido creado`);
-    
-})
