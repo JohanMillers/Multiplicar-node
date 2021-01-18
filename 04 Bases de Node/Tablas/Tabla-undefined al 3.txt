@@ -1,0 +1,3 @@
+undefined * 1 = NaN
+undefined * 2 = NaN
+undefined * 3 = NaN

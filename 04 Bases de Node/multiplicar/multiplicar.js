@@ -1,7 +1,19 @@
 // Require
 const fs = require('fs');
 
-let crearArchivo = (base) => {
+const listarTablas = (base, limite = 12 ) => {
+
+    for (let i = 1; i <= limite; i++) {
+        //Creamos nuestra tabla
+        console.log(`${base} * ${i} = ${base * i}\n`);
+        //Creamos nuestra tabla
+    }
+
+
+
+}
+
+let crearArchivo = (base, limite = 12) => {
     return new Promise( (res, rej) => {
 //Verificando que el dasto pasado sea un numero
         if (!Number(base)) {
@@ -15,7 +27,7 @@ let crearArchivo = (base) => {
 //Declaramos la variables
 
 
-    for (let i = 1; i<=12; i++) {
+    for (let i = 1; i<=limite; i++) {
         //Creamos nuestra tabla
         resultado += `${base} * ${i} = ${base * i}\n`
         //Creamos nuestra tabla
@@ -23,10 +35,10 @@ let crearArchivo = (base) => {
         // console.log(resultado);
     }
 //Grabado en el archivo .Txt la informacion
-    fs.writeFile(`Tablas/Tabla-${base}.txt`,resultado,(err)=> {
+    fs.writeFile(`Tablas/Tabla-${base} al ${limite}.txt`,resultado,(err)=> {
         if(err) rej(err)
         else
-           res(`Tabla-${base}.txt`); 
+           res(`Tabla-${base} al ${limite}.txt`); 
     });
 });
 //Grabado en el archivo .Txt la informacion
@@ -34,6 +46,7 @@ let crearArchivo = (base) => {
 }
 
 module.exports = {
-    crearArchivo
+    crearArchivo,
+    listarTablas
 }
 
