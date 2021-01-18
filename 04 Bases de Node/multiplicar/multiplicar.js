@@ -1,7 +1,14 @@
 // Require
 const fs = require('fs');
+const color = require('colors');
+
 
 const listarTablas = (base, limite = 12 ) => {
+
+    console.log('========================'.green);
+    console.log(`    Tabla de ${base}`.green);
+    console.log('========================'.green);
+    
 
     for (let i = 1; i <= limite; i++) {
         //Creamos nuestra tabla
